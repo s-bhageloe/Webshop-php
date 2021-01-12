@@ -1,15 +1,16 @@
 <?php
-session_start();
 
-include_once("DBconfig.php")
+session_start();
+include_once("Dbconfig.php");
 include_once("header.html");
 
-if(isset( $_GET["page"])) {
-		$page = $_GET["page"];
-} else {
-		$page = "inloggen";
-}
-if($page) {
-	include("pages/" . $page . ".php");
-}
+    if(isset($_GET["page"])) {
+        $page = $_GET["page"];
+    }else{
+        $page = "inloggen";
+    }
+    if($page){
+        include("pages/" . $page . ".php");
+    }
+
 ?>
